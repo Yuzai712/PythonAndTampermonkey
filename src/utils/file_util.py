@@ -147,3 +147,18 @@ class FileUtil:
             return True
         except Exception:
             return False
+    
+    @staticmethod
+    def get_size(path: str) -> int:
+        """
+        获取文件大小。
+        
+        参数：
+            path: 文件路径
+        
+        返回：
+            文件大小（字节）
+        """
+        if os.path.exists(path):
+            return os.path.getsize(path)
+        return 0
